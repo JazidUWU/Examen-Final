@@ -1,0 +1,199 @@
+# Proyecto: Fundación “Manos Unidas”
+## Objetivo del sistema:
+Registrar donaciones, administrar donantes y generar certificados y reportes de manera eficiente.
+
+
+## Objetivo Específico 1: Gestionar el registro de donaciones
+
+### HU-01:
+**Como** administrador  
+**Quiero** registrar una nueva donación  
+**Para** que quede almacenada correctamente en el sistema.
+
+**Criterios de aceptación:**  
+- ✅ El sistema guarda la donación y muestra un mensaje de confirmación.  
+- ❌ Si falta información obligatoria, el sistema impide el registro y muestra un mensaje de error.
+
+### HU-02:
+**Como** donante  
+**Quiero** ingresar una donación desde la página web  
+**Para** apoyar la causa de manera sencilla.
+
+**Criterios de aceptación:**  
+- ✅ El formulario se envía correctamente y confirma la recepción.  
+- ❌ Si el método de pago falla, el sistema lo notifica claramente.
+
+
+### HU-03:
+**Como** administrador  
+**Quiero** registrar donaciones anónimas  
+**Para** contabilizar ingresos sin necesidad de un donante identificado.
+
+**Criterios de aceptación:**  
+- ✅ El sistema permite registrar una donación sin vincularla a un donante.  
+- ❌ Si se intenta ingresar información contradictoria (ej. nombre y "anónimo"), el sistema alerta del conflicto.
+
+
+### HU-04:
+**Como** voluntario  
+**Quiero** ver una lista de las últimas donaciones  
+**Para** dar seguimiento y enviar agradecimientos.
+
+**Criterios de aceptación:**  
+- ✅ El sistema lista las donaciones más recientes con sus detalles.  
+- ❌ Si no hay donaciones registradas, el sistema indica que no hay datos disponibles.
+
+
+### HU-05:
+**Como** administrador  
+**Quiero** editar una donación registrada  
+**Para** corregir errores de ingreso.
+
+**Criterios de aceptación:**  
+- ✅ El sistema permite modificar campos y guarda los cambios con éxito.  
+- ❌ Si se ingresan datos inválidos al editar, el sistema rechaza la modificación.
+
+
+### HU-06:
+**Como** auditor interno  
+**Quiero** filtrar donaciones por fecha y monto  
+**Para** facilitar la revisión y el control financiero.
+
+**Criterios de aceptación:**  
+- ✅ El sistema aplica correctamente los filtros y muestra los resultados.  
+- ❌ Si no se encuentra ninguna donación bajo los filtros aplicados, el sistema muestra un mensaje informativo.
+
+
+## Objetivo Específico 2: Administrar los donantes
+
+### HU-07:
+**Como** administrador  
+**Quiero** registrar un nuevo donante  
+**Para** mantener una base de datos actualizada.
+
+**Criterios de aceptación:**  
+- ✅ El sistema guarda los datos del nuevo donante exitosamente.  
+- ❌ Si el correo ya está en uso, el sistema muestra un mensaje de error.
+
+
+### HU-08:
+**Como** donante  
+**Quiero** actualizar mi información personal  
+**Para** asegurar que los certificados lleguen correctamente.
+
+**Criterios de aceptación:**  
+- ✅ El sistema guarda los cambios y los refleja en el perfil del donante.  
+- ❌ Si los campos obligatorios están vacíos, no se permite guardar.
+
+
+### HU-09:
+**Como** voluntario  
+**Quiero** buscar donantes por nombre o correo  
+**Para** acceder rápidamente a su historial.
+
+**Criterios de aceptación:**  
+- ✅ El sistema muestra los resultados coincidentes con la búsqueda.  
+- ❌ Si no hay coincidencias, el sistema indica que no se encontraron donantes.
+
+---
+
+### HU-10:
+**Como** administrador  
+**Quiero** eliminar un donante inactivo  
+**Para** mantener depurada la base de datos.
+
+**Criterios de aceptación:**  
+- ✅ El sistema solicita confirmación antes de eliminar y procede correctamente.  
+- ❌ Si el donante tiene donaciones registradas, el sistema impide la eliminación y lo indica.
+
+---
+
+### HU-11:
+**Como** administrador  
+**Quiero** ver el historial de donaciones de un donante  
+**Para** conocer su nivel de participación.
+
+**Criterios de aceptación:**  
+- ✅ El sistema muestra una lista detallada de donaciones por donante.  
+- ❌ Si el donante no tiene historial, el sistema lo indica claramente.
+
+---
+
+### HU-12:
+**Como** coordinador de campañas  
+**Quiero** clasificar donantes por frecuencia de aportes  
+**Para** dirigir estrategias de fidelización.
+
+**Criterios de aceptación:**  
+- ✅ El sistema permite segmentar donantes según su frecuencia de donación.  
+- ❌ Si no hay suficientes datos, el sistema informa que no se puede generar la segmentación.
+
+---
+
+## Objetivo Específico 3: Generar reportes y certificados
+
+### HU-13:
+**Como** administrador  
+**Quiero** generar certificados de donación en PDF  
+**Para** entregarlos como comprobantes válidos.
+
+**Criterios de aceptación:**  
+- ✅ El certificado se genera correctamente con los datos del donante y donación.  
+- ❌ Si falta información clave, el sistema no permite generar el certificado.
+
+---
+
+### HU-14:
+**Como** donante  
+**Quiero** recibir automáticamente el certificado por correo  
+**Para** tenerlo disponible sin solicitarlo manualmente.
+
+**Criterios de aceptación:**  
+- ✅ El sistema envía el certificado correctamente al correo registrado.  
+- ❌ Si el correo está mal ingresado, el sistema indica error de entrega.
+
+---
+
+### HU-15:
+**Como** analista  
+**Quiero** generar reportes mensuales y anuales  
+**Para** evaluar el desempeño de recaudación.
+
+**Criterios de aceptación:**  
+- ✅ El sistema permite seleccionar el período y exportar el reporte.  
+- ❌ Si el período no tiene datos, el sistema informa que el reporte está vacío.
+
+---
+
+### HU-16:
+**Como** contador  
+**Quiero** exportar reportes en formato Excel  
+**Para** trabajar los datos contables en herramientas externas.
+
+**Criterios de aceptación:**  
+- ✅ El sistema genera correctamente el archivo con las columnas requeridas.  
+- ❌ Si se genera un error en el archivo, el sistema lo informa y sugiere revisar los datos.
+
+---
+
+### HU-17:
+**Como** coordinador de campañas  
+**Quiero** ver estadísticas visuales de donaciones  
+**Para** tomar decisiones estratégicas con base en datos.
+
+**Criterios de aceptación:**  
+- ✅ El sistema muestra gráficos claros y actualizados.  
+- ❌ Si no hay datos recientes, el sistema indica que no puede generar visualizaciones.
+
+---
+
+### HU-18:
+**Como** administrador  
+**Quiero** filtrar certificados por rango de fechas  
+**Para** reemitir comprobantes de un periodo determinado.
+
+**Criterios de aceptación:**  
+- ✅ El sistema permite filtrar y descargar certificados según el periodo indicado.  
+- ❌ Si no hay certificados en ese rango, el sistema muestra un mensaje informativo.
+
+---
